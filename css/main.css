@@ -1,0 +1,320 @@
+body.index{
+    background-image: url(../content/img/clouds.jpg);
+    background-size: auto;
+    max-width: 100%;
+}
+nav{
+    height: auto;
+}
+
+.jumbotron{
+    background-image: url(../content/img/auckland.jpg);
+    background-position: center;
+    background-size: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+.container-fluid{
+    padding:0;
+    margin:0;
+}
+
+footer{
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+/*=============Content Section Page 1=============*/
+#content{
+    margin-bottom: 25px;
+}
+
+/*=============Contact us Section Page 1=============*/
+#contact-us{
+    margin: 40px 0px 20px 0px;
+    padding-top: 20px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.contact-us-form{
+    max-width: 700px;
+    background-color: black;
+    margin: auto;
+    padding: 25px;
+    color: white;
+}
+
+.contact-us-form .contactFrom {
+    max-width: max-content;
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.form-group {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-group input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-group input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-group.success input {
+	border-color: #2ecc71;
+}
+
+.form-group.error input {
+	border-color: #e74c3c;
+}
+
+.form-group i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-group.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-group.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-group small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-group.error small {
+	visibility: visible;
+}
+
+.form button {
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+    padding: 10px;
+    margin: 0px 20px 0px 0px;
+    float: left;
+}
+
+/*=============Tab Page 2=============*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+  
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+  
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+.tab button.active {
+    background-color: #ccc;
+}
+  
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tabcontent .container{
+    padding-top: 20px;
+}
+
+/*=============gallery.html css=============*/
+.img-fluid{
+    margin: 15px 0px;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; 
+}
+
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; 
+}
+
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); 
+}
+    
+@media (max-width: 450px) {
+    .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+        }
+    }
+    
+
+/*=============payment.html css=============*/
+.creditCardForm {
+    max-width: 800px;
+    background-color: #fff;
+    margin: 100px auto;
+    overflow: hidden;
+    padding: 25px;
+    color: #4c4e56;
+}
+
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4c4e56;
+}
+
+.creditCardForm .payment {
+    max-width: max-content;
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+
+.creditCardForm .payment .form-control {
+    line-height: 40px;
+    height: auto;
+    padding: 0 16px;
+}
+
+.creditCardForm #name-field{
+    width: 50%;
+    margin-right: 20px;
+}
+
+.creditCardForm #email-field {
+    width: 47%;
+}
+
+.creditCardForm #address-field {
+    width: 100%;
+}
+
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+
+.creditCardForm #credit-cards {
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.radio-inline{
+    display: inline-block;
+    margin: 0px 18px;
+}
+
+.radio{
+    margin: 10px 0px 0px 0px;
+}
+
+.creditCardForm #pay-now {
+    width: 100%;
+}
+
+.creditCardForm #check-box{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+
+.creditCardForm .payment select {
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+@media(max-width: 650px) {
+    .creditCardForm .name,
+    .creditCardForm .address,
+    .creditCardForm .email,
+    .creditCardForm #credit_cards
+    {
+        width: 100%;
+    }
+}
