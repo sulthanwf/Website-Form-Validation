@@ -21,6 +21,10 @@ p{
     text-align: justify;
 }
 
+.img-responsive{
+    width: 100%;
+}
+
 .container-fluid{
     padding:0;
     margin:0;
@@ -28,8 +32,7 @@ p{
 
 footer{
     color: black;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding: 10px 0px;
 }
 
 /*=============Content Section Page 1=============*/
@@ -39,7 +42,7 @@ footer{
 
 /*=============Contact us Section Page 1=============*/
 #contact-us{
-    margin: 40px 0px 20px 0px;
+    margin: 40px 0px 0px 0px;
     padding-top: 20px;
     background-color: black;
     color: whitesmoke;
@@ -69,6 +72,7 @@ footer{
 	position: relative;
 }
 
+/*=============Form Validation CSS=============*/
 .form-group input {
 	border: 2px solid #f0f0f0;
 	border-radius: 4px;
@@ -121,16 +125,19 @@ footer{
 	visibility: visible;
 }
 
-.form button {
-	border: 2px solid #8e44ad;
-	border-radius: 4px;
-	color: #fff;
-	display: block;
-	font-family: inherit;
-	font-size: 16px;
-    padding: 10px;
-    margin: 0px 20px 0px 0px;
-    float: left;
+.form-group p{
+    visibility: hidden;
+}
+
+.form-group.success-message{
+    border: 1px solid #2ecc71;
+    padding: 5px;
+}
+
+.form-group.success-message p{
+    visibility: visible;
+    text-align: justify;
+    color: black;
 }
 
 /*=============Tab Page 2=============*/
@@ -164,6 +171,7 @@ footer{
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    background-color: wheat;
 }
 
 .tabcontent .container{
@@ -296,7 +304,6 @@ footer{
     width: 100%;
     margin-top: 3px;
     font-size: 24px;
-    background-color: #2ec4a5;
     color: white;
 }
 
@@ -309,12 +316,11 @@ footer{
     opacity: 0.2;
 }
 
-@media(max-width: 650px) {
-    .creditCardForm .name,
-    .creditCardForm .address,
-    .creditCardForm .email,
-    .creditCardForm #credit_cards
-    {
+@media(max-width: 810px) {
+    .creditCardForm #name-field,
+    .creditCardForm #address-field,
+    .creditCardForm #email-field,
+    .creditCardForm #credit_cards{
         width: 100%;
     }
 }

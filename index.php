@@ -6,21 +6,18 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Sulthan Auliya">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php include 'external_library.html';?>
 
-        <?php include 'external_library.html';
-        ?>
         <title>Internet Programming Assignment 1</title>
-
     </head>
 
     <body class="index">
         <header>
-            <?php include 'header.html'
-            ?>
+            <?php include 'header.html';?>
         </header> 
 
         <div class="jumbotron">
-            <h1>Welcome</h1>
+            <h1>Auckland</h1>
         </div>
 
         <section id="content">
@@ -38,7 +35,7 @@
                         </p>
                     </div>
                     <div class="col-sm-6">
-                        <img src="content/img/harbour bridge.jpg" alt="" height="100%" width="100%">
+                        <img src="content/img/harbour bridge.jpg" class="img-responsive" alt="Auckland Harbour Bridge">
                     </div>
                 </div>
             </div>
@@ -52,65 +49,14 @@
         
         <section id="contact-us">
             <div class="container-fluid">
-                <div class="contact-us-form">
-                    <div class="heading">
-                        <h3>Contact Us</h3>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name" id="fname">
-                                <i class="fa fa-check-circle"></i>
-                                <i class="fa fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name" id="lname">
-                                <i class="fa fa-check-circle"></i>
-                                <i class="fa fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Contact No." id="contactnum">
-                                <i class="fa fa-check-circle"></i>
-                                <i class="fa fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email" id="email">
-                                <i class="fa fa-check-circle"></i>
-                                <i class="fa fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
-                                <i class="fa fa-check-circle"></i>
-                                <i class="fa fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <button type="reset" class="btn btn-secondary">Reset</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <?php include 'contactus.html';?>
             </div>
         </section>
 
-        <footer class="page-footer font-small blue pt-4">  
+        <footer>  
+            <?php include 'footer.html';?>
             <script src="js/contactusvalidation.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $(".nav-link").hover(function(){
-                        $(this).css("color", "wheat");
-                    }, function(){
-                        $(this).css("color", "rgba(255,255,255,.5)");
-                    });
-                });
-            </script>
-            <?php include 'footer.html';
-            ?>
+            <script src="js/hover.js"></script>
         </footer>
     </body>
 </html>

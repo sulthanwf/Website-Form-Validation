@@ -10,8 +10,8 @@ const checkBox = document.getElementById("terms-condition");
 
 form.addEventListener('submit', e =>{
     e.preventDefault();
-
-    checkInputs()
+    
+    successAlert(checkInputs(),cardType());
 });
 
 function checkInputs(){
@@ -21,35 +21,45 @@ function checkInputs(){
     const cardNumValue = cardNum.value.trim();
     const numbers = /^[0-9]+$/;
     let radioCheck = false;
+    let successCount = 0;
 
+    //===============Name Field Check===============
     if(nameValue === ''){
         setErrorFor(uname, 'Name cannot be blank');
     } else {
         setSuccessFor(uname);
+        successCount++;
     }
 
+    //===============Address Field Check===============
     if(addressValue === ''){
         setErrorFor(address, 'Name cannot be blank');
     } else {
         setSuccessFor(address);
+        successCount++;
     }
 
+    //===============Email Field Check===============
     if(emailValue === ''){
         setErrorFor(email, 'Email cannot be blank');
     } else if (!isEmail(emailValue)){
         setErrorFor(email, 'Email is not valid');
     } else {
         setSuccessFor(email);
+        successCount++;
     }
 
+    //===============Card Number Field Check===============
     if(cardNumValue === ''){
         setErrorFor(cardNum, 'Card number cannot be blank');
     }else if(!cardNumValue.match(numbers)){
         setErrorFor(cardNum, 'Card number can only contain numbers');
     } else{
         setSuccessFor(cardNum);
+        successCount++;
     }
 
+    //===============Radio Check===============
     for(var i=0;i<creditCards.length;i++){
         if(creditCards[i].checked){
             radioCheck = true;
@@ -60,24 +70,53 @@ function checkInputs(){
         setErrorFor2(creditCardId, 'Please choose 1 card');
     } else {
         setSuccessFor2(creditCardId);
+        successCount++;
     }
 
+    //===============Check Box Check===============
     if(checkBox.checked == false){
         setErrorFor2(checkBoxId, 'Please agree to terms & condition');
     } else {
         setSuccessFor2(checkBoxId);
+        successCount++;
     }
-    /*if(document.querySelector('input[name="credit_card"]:checked').value === null){
-        setErrorFor2(creditCards, 'Please choose 1 credit card');
-    } else {
-        setSuccessFor2(creditCards);
-    }*/
 
-    if(checkBox === undefined){
-        setErrorFor2(checkBox, 'Please agree with the terms & condition');
+    return successCount;
+}
+
+function successAlert (successCount, cardType){
+    const countForSuccess = 6;
+
+    const nameValue = uname.value.trim();
+    const addressValue = address.value.trim();
+    const emailValue = email.value.trim();
+    const cardNumValue = cardNum.value.trim();
+    const successDiv = document.getElementById("success-message");
+    let message = "Hi " + nameValue + ", Thanks for purchasing our product using your " + cardType + 
+    " card that ends with " + cardNumValue.substr(-4) + ". we will send a copy of the receipt to " + emailValue + 
+    " and send the product to " + addressValue;
+
+    if(successCount == countForSuccess){
+        const formControl = successDiv;
+        const p = formControl.querySelector('p');
+        formControl.className = 'form-group success-message';
+        p.innerText = message;
     } else {
-        setSuccessFor2(checkBox);
+        console.log("Failed");
     }
+}
+
+function cardType(){
+    let radioCheck = false;
+    let cardType = "";
+
+    for(var i=0;i<creditCards.length;i++){
+        if(creditCards[i].checked){
+            radioCheck = true;
+            cardType = creditCards[i].id;
+        }
+    }
+    return cardType;
 }
 
 function setErrorFor(input, message){
@@ -92,7 +131,6 @@ function setErrorFor2(input, message){
     const small = formControl.querySelector('small');
     formControl.className = 'form-group error';
     small.innerText = message;
-
 }
 
 function setSuccessFor(input){
