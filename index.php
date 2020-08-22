@@ -16,11 +16,10 @@
             <?php include 'header.html';?>
         </header> 
 
-        <div class="jumbotron">
-            <h1>Auckland</h1>
-        </div>
-
-        <section id="content">
+        <section id="greetings">
+            <div class="jumbotron">
+                <h1>Auckland</h1>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -56,7 +55,6 @@
         <footer>  
             <?php include 'footer.html';?>
             <script src="js/contactusvalidation.js"></script>
-            <script src="js/hover.js"></script>
         </footer>
     </body>
 </html>

@@ -35,9 +35,8 @@ footer{
     padding: 10px 0px;
 }
 
-/*=============Content Section Page 1=============*/
-#content{
-    margin-bottom: 25px;
+#greetings{
+    padding: 0px 0px 25px 0px;
 }
 
 /*=============Contact us Section Page 1=============*/
@@ -171,7 +170,7 @@ footer{
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-    background-color: wheat;
+    background-color: lightblue;
 }
 
 .tabcontent .container{
@@ -183,6 +182,10 @@ footer{
     margin: 15px 0px;
 }
 
+.row{
+    margin: 0px;
+}
+
 .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -190,17 +193,6 @@ footer{
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     column-width: 33%; 
-}
-
-.gallery .pics {
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease; 
-}
-
-.gallery .animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); 
 }
     
 @media (max-width: 450px) {

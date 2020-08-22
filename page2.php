@@ -3,7 +3,7 @@
         <?php include 'external_library.html';?>
         <title>Internet Programming Assignment 1</title>
     </head>
-    
+
     <body>
         <header>
             <?php include 'header.html';?>
@@ -35,7 +35,6 @@
             <?php include 'footer.html';?>   
             <script src="js/tab.js"></script>
             <script src="js/paymentvalidation.js"></script>
-            <script src="js/hover.js"></script>
           </footer>
     </body>
 </html>
